@@ -80,6 +80,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
             const timer = setInterval(() => {
                 setProgressTimer((oldProgress) => {
                     if (oldProgress === 100) {
+                        setProgress(100);
                         clearInterval(timer);
                     }
                     return Math.min(oldProgress + 100 / 450, 100);
