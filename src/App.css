@@ -15,6 +15,12 @@
     height: 100vh;
 }
 
+.error-page-main {
+    width: calc(100vw);
+    min-height: 100vh;
+    height: 100vh;
+}
+
 .sidebarOpen {
     display: none !important;
 }

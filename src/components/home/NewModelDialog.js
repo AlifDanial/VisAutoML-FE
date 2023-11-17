@@ -14,7 +14,7 @@ import { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { useDispatch } from "react-redux";
-import { addNewModel } from "../../actions/modelAction";
+import { addNewModel, reset } from "../../actions/modelAction";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import InfoIcon from "@mui/icons-material/Info";
@@ -70,6 +70,7 @@ const NewModelDialog = ({ open, setOpen, name, type, setName, setType, tooltipId
       type: type,
     });
     if (isValid) {
+      dispatch(reset);
       dispatch(addNewModel(name, type));
       setOpen(false);
       navigate("/dataset");
