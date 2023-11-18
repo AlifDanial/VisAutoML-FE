@@ -15,6 +15,7 @@ import {withStyles} from "@mui/styles";
 import {ArrowBackIos, ArrowForwardIos} from "@mui/icons-material";
 import {tooltipClasses} from '@mui/material/Tooltip';
 import {styled} from '@mui/material/styles';
+import {BACKEND_BASE_FLASK_URL} from "../../config/config";
 
 const Body = ({backDialogOpen, setBackDialogOpen}) => {
     const navigate = useNavigate();
@@ -217,7 +218,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                         )}
                         <iframe
                             id="iframe-id"
-                            src="http://localhost:8050"
+                            src={BACKEND_BASE_FLASK_URL}
                             key={refreshCount} // Use refreshCount as the key to force re-render
                             width="100%"
                             height="97%"
