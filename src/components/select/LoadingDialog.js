@@ -118,7 +118,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
                             console.log("Unknown Error");
                         }
                     })
-            }, 100);
+            }, 1000);
 
             return () => {
                 clearInterval(pingTimer);
