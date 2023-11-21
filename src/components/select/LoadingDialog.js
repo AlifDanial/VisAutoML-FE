@@ -63,7 +63,7 @@ const images = [
 const LoadingDialog = ({open, setOpen, response}) => {
     const navigate = useNavigate();
 
-    const [progress, setProgress] = useState(90);
+    const [progress, setProgress] = useState(0);
     const [progressTimer, setProgressTimer] = useState(0);
 
     useEffect(() => {
