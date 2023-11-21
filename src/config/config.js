@@ -1,3 +1,3 @@
-export const API_BASE_URL = "https://visautoml-be-a3ac6ac86f0a.herokuapp.com";
-export const BACKEND_BASE_URL = "https://visautoml-be-a3ac6ac86f0a.herokuapp.com/api/";
-export const BACKEND_BASE_FLASK_URL = "https://visautoml-be-a3ac6ac86f0a.herokuapp.com:8050";
+export const API_BASE_URL = "https://9505-115-134-225-27.ngrok-free.app";
+export const BACKEND_BASE_URL = "https://9505-115-134-225-27.ngrok-free.app/api/";
+export const BACKEND_BASE_FLASK_URL = "https://c7a1-115-134-225-27.ngrok-free.app";
