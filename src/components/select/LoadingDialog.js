@@ -93,38 +93,38 @@ const LoadingDialog = ({open, setOpen, response}) => {
         }
     }, [open]);
 
-    useEffect(() => {
-        if (open) {
-            const pingTimer = setInterval(() => {
-                fetch(BACKEND_BASE_FLASK_URL)
-                    .then((response) => {
-                        if (response.status === 200) {
-                            setProgress(100);
-                            clearInterval(pingTimer);
-                        } else {
-                            console.log(response.status);
-                        }
-                    })
-                    .catch((error) => {
-                        if (!error?.response) {
-                            console.log("No Server Response");
-                        } else if (error?.code === AxiosError.ERR_NETWORK) {
-                            console.log("Network Error");
-                        } else if (error.response?.status === 404) {
-                            console.log("404 - Not Found");
-                        } else if (error?.code) {
-                            console.log("Code: " + error.code);
-                        } else {
-                            console.log("Unknown Error");
-                        }
-                    })
-            }, 1000);
-
-            return () => {
-                clearInterval(pingTimer);
-            }
-        }
-    }, [open]);
+    // useEffect(() => {
+    //     if (open) {
+    //         const pingTimer = setInterval(() => {
+    //             fetch(BACKEND_BASE_FLASK_URL)
+    //                 .then((response) => {
+    //                     if (response.status === 200) {
+    //                         setProgress(100);
+    //                         clearInterval(pingTimer);
+    //                     } else {
+    //                         console.log(response.status);
+    //                     }
+    //                 })
+    //                 .catch((error) => {
+    //                     if (!error?.response) {
+    //                         console.log("No Server Response");
+    //                     } else if (error?.code === AxiosError.ERR_NETWORK) {
+    //                         console.log("Network Error");
+    //                     } else if (error.response?.status === 404) {
+    //                         console.log("404 - Not Found");
+    //                     } else if (error?.code) {
+    //                         console.log("Code: " + error.code);
+    //                     } else {
+    //                         console.log("Unknown Error");
+    //                     }
+    //                 })
+    //         }, 1000);
+    //
+    //         return () => {
+    //             clearInterval(pingTimer);
+    //         }
+    //     }
+    // }, [open]);
 
     const handleClose = () => {
         setOpen(false);
