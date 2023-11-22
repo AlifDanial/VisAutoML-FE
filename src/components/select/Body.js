@@ -302,11 +302,11 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
         }
     }
 
-    const [alignment, setAlignment] = useState([0, 1, 2]);
+    const [alignment, setAlignment] = useState([0, 1]);
 
     const handleAlignment = (event, newAlignment) => {
         // Check if the new alignment length is greater than 3
-        if (newAlignment.length > 3) {
+        if (newAlignment.length > 2) {
             // Remove the first (oldest) element from the selection
             newAlignment.shift();
         }
@@ -374,8 +374,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                         </div>
                     </Typography>
                 </Box>
-                <Box sx={{width: "100%", display: "flex", gap: "2.5em"}}>
-                    <Box width="20%">
+                <Box sx={{width: "100%", display: "flex", gap: {xl: "2.5em", lg: "2em", md: "1em"},}}>
+                <Box sx={{ width: '25%', minWidth: '211px' }}>
                         <Box display="flex" flexDirection="column" justifyContent="space-between" sx={{height: "35em"}}>
                             <Box
                                 sx={{
@@ -385,7 +385,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                 <Typography
                                     alignItems="center"
                                     sx={{
-                                        fontSize: {xl: "1.2rem", lg: "1.1rem", md: "1rem"},
+                                        fontSize: {xl: "1.2rem", lg: "1.1rem", md: "1rem"}, 
                                         fontWeight: "bolder",
                                         fontFamily: "'SF Pro Display', sans-serif",
                                         marginTop: "1.1em",
@@ -673,8 +673,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                         </Box>
                     </Box>
                     <Divider orientation="vertical" flexItem/>
-                    <Box width="40%">
-                        <Box sx={{height: "5em"}}>
+                    <Box sx={{ width: '50%', minWidth: '370px' }}>
+                        <Box sx={{height: "3em"}}>
                             <Typography
                                 sx={{
                                     fontSize: "1.2rem",
@@ -703,7 +703,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                         />
                     </Box>
                     <Divider orientation="vertical" flexItem/>
-                    <Box width="40%">
+                    <Box sx={{ width: '25%', minWidth: '230px' }}>
                         <Box sx={{height: "5em"}}>
                             <Typography
                                 sx={{
@@ -744,7 +744,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                             placement="left"
                             arrow
                         >
-                            <Box width="100%">
+                            <Box width="100%" sx={{marginTop:"2em"}}>
                                 <ToggleButtonGroup value={alignment} onChange={handleAlignment}
                                                    aria-label="text alignment" color="primary"
                                                    style={{display: "flex", flexWrap: "wrap"}}>
@@ -755,8 +755,10 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                                 border: "1px solid",
                                                 borderRadius: "5px",
                                                 padding: "5px",
-                                                fontFamily: "'SF Pro Display', sans-serif",
-                                            }} value={index}>{item}</ToggleButton>
+                                                fontFamily: "'SF Pro Display', sans-serif",                                                
+                                            }}
+                                            sx = {{fontSize: {xl: "0.9rem", lg: "0.8rem", md: "0.7rem"},}}
+                                            value={index}>{item}</ToggleButton>
                                         )
                                     }
                                 </ToggleButtonGroup>
@@ -773,7 +775,9 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                                     fontFamily: "'SF Pro Display', sans-serif",
                                                     fontWeight: "800",
                                                     padding: "5px"
-                                                }}>
+                                                }}
+                                                sx = {{fontSize: {xl: "1rem", lg: "0.9rem", md: "0.8rem"},}}
+                                                >
                                                     {response.columns[one]}
                                                 </Typography>
                                             </th>

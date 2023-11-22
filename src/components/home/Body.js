@@ -958,7 +958,7 @@ const Body = () => {
                                             <Typography
                                                 sx={{
                                                     fontFamily: "'SF Pro Display', sans-serif",
-                                                    fontSize: "1.5em",
+                                                    fontSize: {xl: "1.5em", lg: "1.2em", md: "0.9em"},
                                                     fontWeight: "700"
                                                 }}
                                             >

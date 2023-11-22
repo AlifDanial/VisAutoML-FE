@@ -13,6 +13,7 @@ import {
     TableCell,
     TableBody,
     TextField,
+    Grid
 } from "@mui/material";
 import {DropzoneArea} from "react-mui-dropzone";
 import {useEffect, useState} from "react";
@@ -245,17 +246,17 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
             Import
         </Typography>
     ) : (
-        <Card className="main"
+        <Grid container className="main"
               sx={{
-                  flex: 1,
+                  display: "flex",
                   backgroundColor: "#F5F5F5",
                   overflowX: "hidden",
                   overflowY: "auto",
-                  padding: "30px",
+                  padding: "20px"
               }}
         >
-            <Paper sx={{width: "100%", height: "100%", padding: "20px", borderRadius: "20px"}}>
-                <Box sx={{display: "flex"}} justifyContent="space-between">
+            <Paper sx={{width: "100%", height: "900px", padding: "20px", borderRadius: "20px"}}>
+                <Box sx={{display: "flex",  }} justifyContent="space-between">
                     <Box sx={{display: "flex"}}>
                         <IconButton onClick={() => setBackDialogOpen(true)}>
                             <ArrowBackIcon/>
@@ -338,7 +339,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                     placement="top"
                     arrow
                 >
-                    <Box sx={{display: "flex", margin: "0 0 1em 0", width: "100%"}}>
+                    <Box sx={{display: "flex", height: '30%', margin: "0 0 1em 0", width: "100%"}}>
                         <Box
                             sx={{
                                 width: "45%",
@@ -359,7 +360,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                 showPreviewsInDropzone={false}
                                 useChipsForPreview
                                 previewText="Uploaded file"
-                                acceptedFiles={["text/csv"]}
+                                acceptedFiles={["text/csv"]}                                
                             />
                         </Box>
                         <Box sx={{
@@ -429,7 +430,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                 </CustomTooltip>
 
 
-                <Box sx={{height: '52%'}}>
+                <Box sx={{height: '60%'}}>
                     {/* Table */}
 
                     <Box sx={{display: 'flex'}}>
@@ -527,8 +528,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                         arrow
                     >
                         <Box sx={{
-                            height: '75%',
-                            overflowX: 'hidden',
+                            height: '70%',
+                            overflowX: 'auto',
                             overflowY: 'auto',
                             borderTop: "1px solid #D3D3D3"
                         }}>
@@ -554,10 +555,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                             </Table>
                         </Box>
                     </CustomTooltip>
-                </Box>
 
-
-                <Box sx={{display: "flex", justifyContent: "flex-end", marginTop: "5px"}}>
+                    <Box sx={{display: "flex", justifyContent: "flex-end", marginTop: "30px"}}>
                     <CustomTooltip
                         open={tooltipId === 100 ? true : false}
                         onOpen={handleOpen}
@@ -585,11 +584,11 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                             Analyse Data
                         </Button>
                     </CustomTooltip>
+                    </Box>
                 </Box>
-
             </Paper>
             <EditDialog open={openEdit} setOpen={setOpenEdit} modelName={model.name}/>
-        </Card>
+        </Grid>
     );
 };
 

@@ -34,6 +34,7 @@ import { DataGrid, GridActionsCellItem, GridRowEditStopReasons, GridRowModes } f
 import { useEffect } from "react";
 import { withStyles } from "@mui/styles";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import LoadingDialog from "./LoadingDialog";
 
 const HtmlTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -73,6 +74,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
   const [values, setValues] = useState([]);
   const [rowModesModel, setRowModesModel] = useState({});
   const [tooltipId, setTooltipId] = useState(0);
+  const [loadingOpen, setLoadingOpen] = useState(true);
 
   useEffect(() => {
     if (response) {
@@ -225,8 +227,13 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
       sx={{ padding: "30px", backgroundColor: "#F5F5F5", zIndex: (theme) => theme.zIndex.drawer + 1, position: "inherit", gap: "1em" }}
       open={isLoading}
     >
-      <CircularProgress color="inherit" />
-      <Typography fontSize="1.5em" fontWeight="bold">Analysing...</Typography>
+      {/* <CircularProgress color="inherit" />
+      <Typography fontSize="1.5em" fontWeight="bold">Analysing...</Typography> */}
+
+      <LoadingDialog
+              open={loadingOpen}
+              // setOpen={setLoadingOpen}
+            />
     </Backdrop>
   ) : (
     <Card className="main"
@@ -288,7 +295,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
             marginTop: "0.5em"
           }}
         >
-          <Box sx={{ width: "15em" }}>
+          <Box sx={{ width: "25%" }}>
             <Box
               sx={{
                 fontFamily: "'SF Pro Display', sans-serif",
@@ -446,7 +453,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
               </Box>
             </CustomTooltip>
           </Box>
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ width:"75%" }}>
             <Box
               sx={{
                 fontFamily: "'SF Pro Display', sans-serif",

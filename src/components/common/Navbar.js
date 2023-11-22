@@ -1,4 +1,4 @@
-import { Box, Grid, Card, Link, Typography, Button, ButtonGroup, Divider, Lavel, Tooltip, Icon } from "@mui/material";
+import { Box, Grid, Card, Link, Typography, Button, ButtonGroup, Divider, Lavel, Tooltip, Icon, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PsychologyIcon from '@mui/icons-material/Psychology';
@@ -114,6 +114,12 @@ const Navbar = (props) => {
 
   const sidebarClass = props.isOpen ? "sidebarShow" : "sidebarHidden";
 
+
+  console.log("PROPS OPEN STATUS:",props.isOpen)
+  const isLargeScreen = useMediaQuery('(min-width: 1280px)');
+  const isMediumScreen = useMediaQuery('(min-width: 960px)');
+
+
   return (
     <div id="#navbar" className={`${sidebarClass} navbar`}>
       <Grid container sx={{ height: "100%", padding: "10px" }}>
@@ -152,7 +158,7 @@ const Navbar = (props) => {
             className="sidebarOpen"
             edge="start"
             aria-label="menu"
-            sx={{ marginTop: "12px", color: "#1A97F5", marginLeft: `${props.isOpen ? "185px" : "-15px"}` }}
+            sx={{ marginTop: "10px", color: "#1A97F5", marginLeft: `${props.isOpen ? "185px" : "-22px"}` }}
             onClick={props.toggleSidebar}
           >
             {props.isOpen ? <ArrowCircleLeftIcon fontSize="large" color="inherit" /> : <ArrowCircleRightIcon fontSize="large" color="inherit" />}
@@ -350,7 +356,7 @@ const Navbar = (props) => {
               placement="right"
               arrow
             >
-              <Box>
+              <Grid>
                 <CustomTooltip
                   open={tooltipId === 2 ? true : false}
                   onOpen={handleOpen}
@@ -367,11 +373,13 @@ const Navbar = (props) => {
                   placement="right"
                   arrow
                 >
-                  <Grid item xs={12} sx={{ textAlign: "center", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <Grid item xs={12} sx={{ textAlign: "center", alignItems: "center", justifyContent: "center" }}>
+
+                  {props.isOpen ? (
                     <ButtonGroup
                       disableElevation
                       variant="contained"
-                      sx={{ marginTop: "1em", marginLeft:"0.7em" }}
+                      sx={{ marginTop: "1em", marginLeft:"0.7em", display: props.isOpen ? "flex" : "none", }}
                     >
                       <Button
                         style={
@@ -402,9 +410,45 @@ const Navbar = (props) => {
                         Expert
                       </Button>
                     </ButtonGroup>
-                  </Grid>
+                  ) : (
+                    <ButtonGroup
+                      disableElevation
+                      variant="contained"
+                      sx={{ marginTop: "1em", marginLeft:"0.7em",  display: isLargeScreen ? 'flex' : isMediumScreen ? 'none' : 'flex', }}
+                    >
+                      <Button
+                        style={
+                          devMode ? {
+                            backgroundColor: "rgba(0, 0, 0, 0.12)",
+                            color: "rgba(0, 0, 0, 0.26)"
+                          } : {
+                            backgroundColor: "#1565c0",
+                            color: "white"
+                          }}
+                        onClick={onDevModeHandler}
+                        disabled={devMode ? false : true}
+                      >
+                        Easy
+                      </Button>
+                      <Button
+                        style={
+                          devMode ? {
+                            backgroundColor: "#1565c0",
+                            color: "white"
+                          } : {
+                            backgroundColor: "rgba(0, 0, 0, 0.12)",
+                            color: "rgba(0, 0, 0, 0.26)"
+                          }}
+                        onClick={onDevModeHandler}
+                        disabled={devMode ? true : false}
+                      >
+                        Expert
+                      </Button>
+                    </ButtonGroup>
+                    )}
+                  </Grid>              
                 </CustomTooltip>
-              </Box>
+              </Grid>
             </CustomTooltip>
           </Grid>
         </Grid>
