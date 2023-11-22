@@ -126,12 +126,16 @@ const LoadingDialog = ({ open, setOpen }) => {
           ))}
         </Carousel>
 
-        <Box
+       
+      </DialogContent>
+      <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
-            gap: "1em"
+            gap: "1em",
+            marginLeft: "15px",
+            marginRight: "15px",
           }}
         >
           <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} />
@@ -140,7 +144,6 @@ const LoadingDialog = ({ open, setOpen }) => {
           </Typography>
 
         </Box>
-      </DialogContent>
       <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
         <Button onClick={handleClose} variant="outlined" sx={{ marginLeft: "15px", marginBottom: "10px", fontFamily: "'SF Pro Display', sans-serif",
  }}>

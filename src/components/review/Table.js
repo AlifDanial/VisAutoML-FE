@@ -67,7 +67,7 @@ const TableComponent = ({ descrip, setDescrip, tooltipId, setTooltipId }) => {
           </Box>
         ) : (
           <Box padding="10px" display="flex" flexDirection="column" gap="10px">
-            <Typography>{"Review the percentage empty per column, >50% empty makes the column/feature less reliable for prediction."}</Typography>
+            <Typography>{"Review the percentage empty per column 'Empty(%)', more than 50% empty makes the column/feature less reliable for prediction."}</Typography>
             <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(17)}>PREVIOUS</Button>
               <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(19)}>NEXT</Button>
@@ -75,7 +75,7 @@ const TableComponent = ({ descrip, setDescrip, tooltipId, setTooltipId }) => {
           </Box>
         )
       }
-      placement={tooltipId === 17 ? "left" : 'bottom-start'}
+      placement={tooltipId === 17 ? "bottom-start" : 'bottom-start'}
       arrow
     >
 <TableContainer component={Paper} sx={{ backgroundColor: "#ffffff" }}>

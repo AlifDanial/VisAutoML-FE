@@ -117,7 +117,7 @@ const Navbar = (props) => {
 
   console.log("PROPS OPEN STATUS:",props.isOpen)
   const isLargeScreen = useMediaQuery('(min-width: 1280px)');
-  const isMediumScreen = useMediaQuery('(min-width: 960px)');
+  const isMediumScreen = useMediaQuery('(min-width: 100px)');
 
 
   return (

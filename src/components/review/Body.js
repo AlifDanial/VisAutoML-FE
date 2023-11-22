@@ -337,7 +337,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
                   <Typography>At a glance, check if your file is ready for predictions. Ensure
                     all boxes are green for the best outcomes!</Typography>
                   <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(14)}>PREVIOUS</Button>
+                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(9)}>PREVIOUS</Button>
                     <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(16)}>NEXT</Button>
                   </Box>
                 </Box>
@@ -569,7 +569,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
             onClose={handleClose}
             title={
               <Box padding="10px" display="flex" flexDirection="column" gap="10px">
-                <Typography>{"Tailor your raw data here. While VisAutoML handles major adjustments, you can fine-tune column names, data formats, and specific values for precision."}</Typography>
+                <Typography>{"Tailor your raw data here. While VisAutoML handles major adjustments, you can familiarize yourself with the dataset and edit specific rows."}</Typography>
                 <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(20)}>PREVIOUS</Button>
                   <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(22)}>NEXT</Button>
@@ -612,7 +612,7 @@ const Body = ({ backDialogOpen, setBackDialogOpen }) => {
             onClose={handleClose}
             title={
               <Box padding="10px" display="flex" flexDirection="column" gap="10px">
-                <Typography>{"By clicking 'Process Data', the system will automatically impute missing data using the mean, remove duplicate values, and address outliers for you."}</Typography>
+                <Typography>{"By clicking 'Process Data', the system will automatically impute missing data using the mean, remove duplicate values, and preprocess the data for you."}</Typography>
                 <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(21)}>PREVIOUS</Button>
                   <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(23)}>OKAY</Button>

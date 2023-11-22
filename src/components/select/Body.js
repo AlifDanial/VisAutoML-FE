@@ -572,7 +572,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                         </HtmlTooltip>
                                     </Box>
                                     <CustomTooltip
-                                        open={tooltipId === 26 ? true : false}
+                                        open={tooltipId === 31  ? true : false}
                                         onOpen={handleOpen}
                                         onClose={handleClose}
                                         title={
@@ -581,9 +581,9 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                                     Example Units: years, cm, %, $.</Typography>
                                                 <Box style={{display: 'flex', justifyContent: 'space-between'}}>
                                                     <Button variant="contained" startIcon={<ArrowBackIos/>}
-                                                            onClick={() => setTooltipId(25)}>PREVIOUS</Button>
+                                                            onClick={() => setTooltipId(30)}>PREVIOUS</Button>
                                                     <Button variant="contained" endIcon={<ArrowForwardIos/>}
-                                                            onClick={() => setTooltipId(27)}>NEXT</Button>
+                                                            onClick={() => setTooltipId(32)}>NEXT</Button>
                                                 </Box>
                                             </Box>
                                         }
@@ -626,7 +626,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                         </HtmlTooltip>
                                     </Box>
                                     <CustomTooltip
-                                        open={tooltipId === 26 ? true : false}
+                                        open={tooltipId === 31 ? true : false}
                                         onOpen={handleOpen}
                                         onClose={handleClose}
                                         title={
@@ -636,9 +636,9 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                                 </Typography>
                                                 <Box style={{display: 'flex', justifyContent: 'space-between'}}>
                                                     <Button variant="contained" startIcon={<ArrowBackIos/>}
-                                                            onClick={() => setTooltipId(25)}>PREVIOUS</Button>
+                                                            onClick={() => setTooltipId(30)}>PREVIOUS</Button>
                                                     <Button variant="contained" endIcon={<ArrowForwardIos/>}
-                                                            onClick={() => setTooltipId(27)}>NEXT</Button>
+                                                            onClick={() => setTooltipId(32)}>NEXT</Button>
                                                 </Box>
                                             </Box>
                                         }

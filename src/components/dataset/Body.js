@@ -222,7 +222,9 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
     };
     const onClick = () => {
         if (file) {
-            dispatch(addDataSet(file.name, algoValue, parsedData, columns, values));
+            if(setTooltipId == 155){dispatch({type: "TOGGLE_MODE", payload: 15});}
+                
+            dispatch(addDataSet(file.name, algoValue, parsedData, columns, values));            
             dispatch(getReview(file));
         }
         navigate('/review');
@@ -568,7 +570,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                 <Box style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <Button variant="contained" startIcon={<ArrowBackIos/>}
                                             onClick={() => setTooltipId(14)}>PREVIOUS</Button>
-                                    <Button variant="contained" onClick={() => setTooltipId(15)}>OKAY</Button>
+                                    <Button variant="contained" onClick={() => setTooltipId(155)}>OKAY</Button>
                                 </Box>
                             </Box>
                         }

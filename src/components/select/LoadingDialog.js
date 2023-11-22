@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Box, LinearProgress} from "@mui/material";
+import {Box, LinearProgress, useMediaQuery} from "@mui/material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
@@ -17,6 +17,7 @@ import {Carousel} from "react-responsive-carousel";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {BACKEND_BASE_FLASK_URL} from "../../config/config";
 import {AxiosError} from "axios";
+import React from 'react';
 
 
 const HtmlTooltip = styled(({className, ...props}) => (
@@ -131,13 +132,20 @@ const LoadingDialog = ({open, setOpen, response}) => {
         setProgress(0);
     };
 
+    const isLargeScreen = useMediaQuery('(min-width: 1280px) and (min-height: 720px)');
+    const isMediumScreen = useMediaQuery('(min-width: 100px) and (min-height: 100px)');
+    
+  
+
     return (
         <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
             <DialogContent
                 sx={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "1em"
+                    gap: "1em",
+                    maxHeight: "80vh", // Set a maximum height (adjust as needed)
+                    overflowY: "auto", // Add vertical scrollbar if content exceeds maxHeight
                 }}
             >
                 <Carousel
@@ -162,7 +170,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
                                     padding: '5px', // Padding around the text
                                     fontSize: '17px', // Font size of the text
                                     fontFamily: "'SF Pro Display', sans-serif",
-                                    borderRadius: "5px"
+                                    borderRadius: "5px",
                                 }}
                             >
                                 {image.title}
@@ -171,12 +179,16 @@ const LoadingDialog = ({open, setOpen, response}) => {
                     ))}
                 </Carousel>
 
-                <Box
+               
+            </DialogContent>
+            <Box
                     sx={{
                         display: "flex",
                         flexDirection: "column",
                         textAlign: "center",
-                        gap: "1em"
+                        gap: "1em",
+                        marginLeft: "15px",
+                        marginRight: "15px",
                     }}
                 >
                     <LinearProgress variant="determinate" value={progress} style={{height: 20, borderRadius: 10}}/>
@@ -184,7 +196,6 @@ const LoadingDialog = ({open, setOpen, response}) => {
                         {progress === 100 ? "Model Ready" : `Loading Model: About ${parseInt(45 - 45 * progress / 100)} seconds remaining`}
                     </Typography>
                 </Box>
-            </DialogContent>
             <DialogActions style={{display: "flex", justifyContent: "space-between"}}>
                 <Button onClick={handleClose} variant="outlined" sx={{
                     marginLeft: "15px", marginBottom: "10px", fontFamily: "'SF Pro Display', sans-serif",

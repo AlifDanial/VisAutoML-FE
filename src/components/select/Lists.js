@@ -109,15 +109,15 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
             }}
           >
             <CustomTooltip
-              open={tooltipId === 28}
+              open={tooltipId === 27}
               onOpen={handleOpen}
               onClose={handleClose}
               title={
                 <Box padding="10px" display="flex" flexDirection="column" gap="10px">
                   <Typography>Select the target variable or the outcome you want your model to predict. This is the main focus of your analysis.</Typography>
                   <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(27)}>PREVIOUS</Button>
-                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(29)}>NEXT</Button>
+                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(26)}>PREVIOUS</Button>
+                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(28)}>NEXT</Button>
                   </Box>
                 </Box>
               }
@@ -137,7 +137,7 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
             </CustomTooltip>
 
             <CustomTooltip
-              open={tooltipId === 29 ? true : false}
+              open={tooltipId === 28 ? true : false}
               onOpen={handleOpen}
               onClose={handleClose}
               title={
@@ -145,8 +145,8 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
                   <Typography>Choose one column that contains unique identifiers for your data entries. These 
                 are often used to track rows but shouldn't influence the model's predictions</Typography>
                   <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(28)}>PREVIOUS</Button>
-                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(30)}>NEXT</Button>
+                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(27)}>PREVIOUS</Button>
+                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(29)}>NEXT</Button>
                   </Box>
                 </Box>
               }
@@ -164,29 +164,29 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
              </div>
             </CustomTooltip>
             <CustomTooltip
-                open={(tooltipId === 30 || tooltipId === 31) ? true : false}
+                open={(tooltipId === 29 || tooltipId === 30) ? true : false}
                 onOpen={handleOpen}
                 onClose={handleClose}
                 title={
-                  tooltipId === 30 ? (
+                  tooltipId === 29 ? (
                     <Box padding="10px" display="flex" flexDirection="column" gap="10px">
                       <Typography>Omit columns that are irrelevant to the prediction like other unique IDs and timestamps to avoid data leakage.</Typography>
+                      <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(28)}>PREVIOUS</Button>
+                        <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(30)}>NEXT</Button>
+                      </Box>
+                    </Box>
+                  ) : (
+                    <Box padding="10px" display="flex" flexDirection="column" gap="10px">
+                      <Typography>{"Data leakage causes the model to learn from information it shouldn't have access to, leading to overfitting (model performs well on training data but poorly on test data)."}</Typography>
                       <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(29)}>PREVIOUS</Button>
                         <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(31)}>NEXT</Button>
                       </Box>
                     </Box>
-                  ) : (
-                    <Box padding="10px" display="flex" flexDirection="column" gap="10px">
-                      <Typography>{"Data leakage causes the model to learn from information it shouldn't have access to, leading to overfitting (model performs well on known data but poorly on unseen data)."}</Typography>
-                      <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(30)}>PREVIOUS</Button>
-                        <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(32)}>NEXT</Button>
-                      </Box>
-                    </Box>
                   )
                 }
-                placement={tooltipId === 30 ? "left" : 'right'}
+                placement={tooltipId === 29 ? "left" : 'right'}
                 arrow
             > 
             <div style={{ display: 'inline-block', width: '100%' }}>
@@ -201,7 +201,7 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
             </CustomTooltip>
           </Box>
           <CustomTooltip
-              open={tooltipId === 27 ? true : false}
+              open={tooltipId === 26 ? true : false}
               onOpen={handleOpen}
               onClose={handleClose}
               title={
@@ -209,8 +209,8 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
                   <Typography>Fine-tune your model's input. Drag and drop columns to select 
                   which features to use, which to predict, and which to ignore.</Typography>
                   <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(26)}>PREVIOUS</Button>
-                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(28)}>NEXT</Button>
+                    <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(25)}>PREVIOUS</Button>
+                    <Button variant="contained" endIcon={<ArrowForwardIos />} onClick={() => setTooltipId(27)}>NEXT</Button>
                   </Box>
                 </Box>
               }
