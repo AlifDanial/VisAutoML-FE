@@ -128,7 +128,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
 
     const handleClose = () => {
         setOpen(false);
-        setProgress(90);
+        setProgress(0);
     };
 
     return (
@@ -181,7 +181,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
                 >
                     <LinearProgress variant="determinate" value={progress} style={{height: 20, borderRadius: 10}}/>
                     <Typography sx={{fontSize: "1.2em", fontFamily: "'SF Pro Display', sans-serif",}}>
-                        {progress === 100 ? "Model Ready" : `Loading Model: About ${parseInt(45 - 45 * progressTimer / 100)} seconds remaining`}
+                        {progress === 100 ? "Model Ready" : `Loading Model: About ${parseInt(45 - 45 * progress / 100)} seconds remaining`}
                     </Typography>
                 </Box>
             </DialogContent>
