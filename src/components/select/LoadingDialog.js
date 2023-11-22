@@ -78,7 +78,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
     useEffect(() => {
         if (open) {
             const timer = setInterval(() => {
-                setProgressTimer((oldProgress) => {
+                setProgress((oldProgress) => {
                     if (oldProgress === 100) {
                         setProgress(100);
                         clearInterval(timer);
