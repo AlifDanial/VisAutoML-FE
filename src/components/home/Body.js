@@ -586,7 +586,7 @@ const Body = () => {
                                                         fontFamily: "'SF Pro Display', sans-serif",
                                                     }}
                                                     component="a"
-                                                    href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/fundamentals/what-is-machine-learning" // Replace with your desired URL
+                                                    href="https://alifs-organization-1.gitbook.io/visautoml-documentation/fundamentals/what-is-machine-learning" // Replace with your desired URL
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
@@ -642,7 +642,7 @@ const Body = () => {
                                                         fontFamily: "'SF Pro Display', sans-serif",
                                                     }}
                                                     component="a"
-                                                    href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/fundamentals/what-is-automl" // Replace with your desired URL
+                                                    href="https://alifs-organization-1.gitbook.io/visautoml-documentation/fundamentals/what-is-automl" // Replace with your desired URL
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
@@ -698,7 +698,7 @@ const Body = () => {
                                                         fontFamily: "'SF Pro Display', sans-serif",
                                                     }}
                                                     component="a"
-                                                    href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/fundamentals/regression-or-classification" // Replace with your desired URL
+                                                    href="https://alifs-organization-1.gitbook.io/visautoml-documentation/fundamentals/regression-or-classification" // Replace with your desired URL
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
@@ -1151,7 +1151,7 @@ const Body = () => {
                                             size="medium"
                                             sx={{borderRadius: "5px", fontFamily: "'SF Pro Display', sans-serif"}}
                                             component="a"
-                                            href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/" // Replace with your desired URL
+                                            href="https://alifs-organization-1.gitbook.io/visautoml-documentation/" // Replace with your desired URL
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1224,7 +1224,7 @@ const Body = () => {
                                             size="medium"
                                             sx={{borderRadius: "5px", fontFamily: "'SF Pro Display', sans-serif"}}
                                             component="a"
-                                            href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/beginner-tips/how-to-evaluate-your-model" // Replace with your desired URL
+                                            href="https://alifs-organization-1.gitbook.io/visautoml-documentation/beginner-tips/how-to-evaluate-your-model" // Replace with your desired URL
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1296,7 +1296,7 @@ const Body = () => {
                                             size="medium"
                                             sx={{borderRadius: "5px", fontFamily: "'SF Pro Display', sans-serif"}}
                                             component="a"
-                                            href="https://app.gitbook.com/o/zdPfAuEYtpcuOflHlZr8/s/6YN5g2XG7tUO55uaWKUE/beginner-tips/how-to-optimize-model-performance" // Replace with your desired URL
+                                            href="https://alifs-organization-1.gitbook.io/visautoml-documentation/beginner-tips/how-to-optimize-model-performance" // Replace with your desired URL
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
