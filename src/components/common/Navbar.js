@@ -115,7 +115,7 @@ const Navbar = (props) => {
   const sidebarClass = props.isOpen ? "sidebarShow" : "sidebarHidden";
 
 
-  console.log("PROPS OPEN STATUS:",props.isOpen)
+  // console.log("PROPS OPEN STATUS:",props.isOpen)
   const isLargeScreen = useMediaQuery('(min-width: 1280px)');
   const isMediumScreen = useMediaQuery('(min-width: 100px)');
 

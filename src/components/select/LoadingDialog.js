@@ -152,7 +152,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
                     autoPlay
                     showThumbs={false}
                     infiniteLoop
-                    interval={15000} // Set the interval to 10 seconds (10000 milliseconds)
+                    interval={8000} // Set the interval to 10 seconds (10000 milliseconds)
                     // stopOnHover // Pause auto-play on hover
                     // stopOnInteraction={false} // Allow interaction without stopping auto-play
                 >

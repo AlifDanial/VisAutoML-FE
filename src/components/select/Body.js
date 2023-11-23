@@ -744,7 +744,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                             placement="left"
                             arrow
                         >
-                            <Box width="100%" sx={{marginTop:"2em"}}>
+                            <Box width="100%" sx={{marginTop:"0.3em", marginBottom:"0.3em"}}>
                                 <ToggleButtonGroup value={alignment} onChange={handleAlignment}
                                                    aria-label="text alignment" color="primary"
                                                    style={{display: "flex", flexWrap: "wrap"}}>

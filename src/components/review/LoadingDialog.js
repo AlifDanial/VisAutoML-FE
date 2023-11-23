@@ -34,7 +34,7 @@ const images = [
   {
     id: 1,
     title: 'Preprocessing: Review the dataset in detail before model training',
-    image: '/img/gif12.gif'
+    image: '/img/preprocess.gif'
   },  
 ];
 
@@ -106,7 +106,7 @@ const LoadingDialog = ({ open, setOpen }) => {
           ))}
         </Carousel>
         </DialogContent>
-        {/* <Box
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -114,14 +114,14 @@ const LoadingDialog = ({ open, setOpen }) => {
             gap: "1em"
           }}
         >
-          <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} />
+          {/* <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} /> */}
           <Typography sx={{ fontSize: "1.2em", fontFamily: "'SF Pro Display', sans-serif", }}>
-            {progress === 100 ? "Model Ready" : `Loading Model: About ${parseInt(15 - 15 * progress / 100)} seconds remaining`}
+            Analysing...
           </Typography>
 
         </Box>
       
-      <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
+      {/* <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
         <Button onClick={handleClose} variant="outlined" sx={{ marginLeft: "15px", marginBottom: "10px", fontFamily: "'SF Pro Display', sans-serif",
  }}>
           Cancel

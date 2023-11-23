@@ -1339,7 +1339,7 @@ const Body = () => {
                 url={videoUrl}
             />
             <DeleteDialog open={deleteDialogOpen} setOpen={setDeleteDialogOpen}/>
-            <WelcomeDialog open={welcomeDialogOpen} setOpen={setWelcomeDialogOpen}/>
+            <WelcomeDialog open={tooltipId === -3} setOpen={setTooltipId}/>
         </Grid>
     );
 };
