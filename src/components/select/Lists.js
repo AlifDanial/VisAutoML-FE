@@ -194,7 +194,7 @@ const Lists = ({ columns, elements, setElements, tooltipId, setTooltipId }) => {
               elements={elements["Columns not to use"]}
               key={"Columns not to use"}
               id={"Columns not to use"}
-              prefix={"Column not to use"}
+              prefix={"Column(s) not to use"}
               tooltip="Irrelevant or unwanted columns. Example: Timestamp, URL, CreatedBy, Description"
             />
             </div>

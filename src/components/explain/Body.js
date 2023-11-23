@@ -166,10 +166,13 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
                                             graphs.</Typography>
                                         <Box style={{display: 'flex', justifyContent: "flex-end"}}>
                                             {/* <Button variant="contained" startIcon={<ArrowBackIos />} onClick={() => setTooltipId(33)}>PREVIOUS</Button> */}
-                                            <Button variant="contained" onClick={() => dispatch({
-                                                type: "TOGGLE_MODE",
-                                                payload: -1
-                                            })}>OKAY</Button>
+                                            <Button variant="contained" 
+                                            // onClick={() => dispatch({
+                                            //     type: "TOGGLE_MODE",
+                                            //     payload: -1
+                                            // })}
+                                            onClick={() => setTooltipId(35)}
+                                            >OKAY</Button>
                                         </Box>
                                     </Box>
                                 }

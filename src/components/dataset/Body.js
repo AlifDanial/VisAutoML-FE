@@ -221,9 +221,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
         setDisabled(false);
     };
     const onClick = () => {
-        if (file) {
-            if(setTooltipId == 155){dispatch({type: "TOGGLE_MODE", payload: 15});}
-                
+        if (file) {            
+            dispatch({type: "TOGGLE_MODE", payload: 15});                         
             dispatch(addDataSet(file.name, algoValue, parsedData, columns, values));            
             dispatch(getReview(file));
         }
