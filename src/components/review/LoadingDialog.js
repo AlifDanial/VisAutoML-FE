@@ -89,7 +89,7 @@ const LoadingDialog = ({ open, setOpen }) => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '30px', // Adjust the vertical position of the text
+                  top: '10px', // Adjust the vertical position of the text
                   left: '50%',    // Center the text horizontally
                   transform: 'translateX(-50%)', // Center the text horizontally
                   backgroundColor: 'rgba(0, 0, 0, 0.7)', // Background color for the text
@@ -115,7 +115,7 @@ const LoadingDialog = ({ open, setOpen }) => {
           }}
         >
           {/* <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} /> */}
-          <Typography sx={{ fontSize: "1.2em", fontFamily: "'SF Pro Display', sans-serif", }}>
+          <Typography sx={{ fontSize: "1.4em", fontFamily: "'SF Pro Display', sans-serif", padding: '10px' }}>
             Analysing...
           </Typography>
 

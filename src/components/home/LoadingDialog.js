@@ -92,7 +92,8 @@ const LoadingDialog = ({ open, setOpen }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "1em"
+          gap: "1em",
+          overflow: 'hidden', // Add this line to make it unscrollable
         }}
       >
       <Carousel
@@ -109,7 +110,7 @@ const LoadingDialog = ({ open, setOpen }) => {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '30px', // Adjust the vertical position of the text
+                  top: '10px', // Adjust the vertical position of the text
                   left: '50%',    // Center the text horizontally
                   transform: 'translateX(-50%)', // Center the text horizontally
                   backgroundColor: 'rgba(0, 0, 0, 0.7)', // Background color for the text

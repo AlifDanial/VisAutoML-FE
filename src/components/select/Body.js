@@ -318,7 +318,8 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
         if (disabled) {
             navigate("/review");
         } else {
-            navigate("/home");
+            setBackDialogOpen(true);
+            // navigate("/home");
         }
     };
 
@@ -344,7 +345,7 @@ const Body = ({backDialogOpen, setBackDialogOpen}) => {
             >
                 <Box sx={{display: "flex"}} justifyContent="space-between">
                     <Box sx={{display: "flex"}}>
-                        <IconButton onClick={handleBack1}>
+                        <IconButton onClick={handleBack}>
                             <ArrowBackIcon/>
                         </IconButton>
                         <Typography

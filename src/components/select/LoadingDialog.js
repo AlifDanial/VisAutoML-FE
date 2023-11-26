@@ -132,8 +132,9 @@ const LoadingDialog = ({open, setOpen, response}) => {
         setProgress(0);
     };
 
-    const isLargeScreen = useMediaQuery('(min-width: 1280px) and (min-height: 720px)');
-    const isMediumScreen = useMediaQuery('(min-width: 100px) and (min-height: 100px)');
+    const isLargeScreen = useMediaQuery('(min-height: 1280px)');
+    const isMediumScreen = useMediaQuery('(min-height: 800px)');
+    
     
   
 
@@ -145,7 +146,9 @@ const LoadingDialog = ({open, setOpen, response}) => {
                     flexDirection: "column",
                     gap: "1em",
                     maxHeight: "80vh", // Set a maximum height (adjust as needed)
-                    overflowY: "auto", // Add vertical scrollbar if content exceeds maxHeight
+                    minHeight: "50vh", // Set a minimum height (adjust as needed)
+                    // overflowY: "auto", // Add vertical scrollbar if content exceeds maxHeight
+                    overflow: 'hidden', // Add this line to make it unscrollable
                 }}
             >
                 <Carousel
@@ -157,12 +160,15 @@ const LoadingDialog = ({open, setOpen, response}) => {
                     // stopOnInteraction={false} // Allow interaction without stopping auto-play
                 >
                     {images.map(image => (
-                        <Box key={image.id} style={{position: 'relative'}}>
-                            <img src={image.image} alt={image.title}/>
+                        <Box key={image.id} style={{position: 'relative',  }}>                            
+                            <img 
+                            src={image.image} 
+                            alt={image.title}                                                       
+                            />                        
                             <div
                                 style={{
                                     position: 'absolute',
-                                    bottom: '30px', // Adjust the vertical position of the text
+                                    top: '10px', // Adjust the vertical position of the text
                                     left: '50%',    // Center the text horizontally
                                     transform: 'translateX(-50%)', // Center the text horizontally
                                     backgroundColor: 'rgba(0, 0, 0, 0.7)', // Background color for the text
@@ -171,6 +177,7 @@ const LoadingDialog = ({open, setOpen, response}) => {
                                     fontSize: '17px', // Font size of the text
                                     fontFamily: "'SF Pro Display', sans-serif",
                                     borderRadius: "5px",
+                                    
                                 }}
                             >
                                 {image.title}
