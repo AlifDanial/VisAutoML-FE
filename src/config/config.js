@@ -1,5 +1,3 @@
-// export const API_BASE_URL = "https://5b0e-188-43-14-13.ngrok-free.app:8080";
-// export const BACKEND_BASE_URL = "https://5b0e-188-43-14-13.ngrok-free.app:8080/api/";
-
-export const API_BASE_URL = "http://localhost:8000";
-export const BACKEND_BASE_URL = "http://localhost:8000/api/";
+export const BACKEND_BASE_URL = "https://3d3b-113-211-210-232.ngrok-free.app/api/";
+export const BACKEND_BASE_FLASK_URL = "https://9869-113-211-210-232.ngrok-free.app";
+export const API_BASE_URL = "https://3d3b-113-211-210-232.ngrok-free.app";

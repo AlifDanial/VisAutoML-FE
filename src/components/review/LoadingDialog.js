@@ -33,29 +33,9 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 const images = [
   {
     id: 1,
-    title: 'Feature Importance: Identify which columns are most influential in the model’s prediction.',
-    image: '/img/gif12.gif'
-  },
-  {
-    id: 2,
-    title: "Stats: Assess how well the model's predictions match the actual data.",
-    image: '/img/gif11.gif'
-  },
-  {
-    id: 3,
-    title: "Individual Predictions: Evaluate the model's predictions on a case-by-case basis",
-    image: '/img/gif13.gif'
-  },
-  {
-    id: 4,
-    title: 'What if..: Simulate what-if scenarios to explore how changes in input data might affect outcomes.',
-    image: '/img/gif14.gif'
-  },
-  {
-    id: 5,
-    title: "Feature Dependence: Learn which columns are driving the model's predictions and how.",
-    image: '/img/giftest.gif'
-  }
+    title: 'Preprocessing: Review the dataset in detail before model training',
+    image: '/img/preprocess.gif'
+  },  
 ];
 
 const LoadingDialog = ({ open, setOpen }) => {
@@ -92,8 +72,7 @@ const LoadingDialog = ({ open, setOpen }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "1em",
-          overflow: 'hidden', // Add this line to make it unscrollable
+          gap: "1em"
         }}
       >
       <Carousel
@@ -126,26 +105,23 @@ const LoadingDialog = ({ open, setOpen }) => {
             </Box>
           ))}
         </Carousel>
-
-       
-      </DialogContent>
-      <Box
+        </DialogContent>
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
-            gap: "1em",
-            marginLeft: "15px",
-            marginRight: "15px",
+            gap: "1em"
           }}
         >
-          <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} />
-          <Typography sx={{ fontSize: "1.2em", fontFamily: "'SF Pro Display', sans-serif", }}>
-            {progress === 100 ? "Model Ready" : `Loading Model: About ${parseInt(15 - 15 * progress / 100)} seconds remaining`}
+          {/* <LinearProgress variant="determinate" value={progress} style={{ height: 20, borderRadius: 10 }} /> */}
+          <Typography sx={{ fontSize: "1.4em", fontFamily: "'SF Pro Display', sans-serif", padding: '10px' }}>
+            Analysing...
           </Typography>
 
         </Box>
-      <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
+      
+      {/* <DialogActions style={{ display: "flex", justifyContent: "space-between" }}>
         <Button onClick={handleClose} variant="outlined" sx={{ marginLeft: "15px", marginBottom: "10px", fontFamily: "'SF Pro Display', sans-serif",
  }}>
           Cancel
@@ -154,7 +130,7 @@ const LoadingDialog = ({ open, setOpen }) => {
  }}>
           Explore Model
         </Button>
-      </DialogActions>
+      </DialogActions> */}
     </Dialog>
   );
 };

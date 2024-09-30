@@ -11,7 +11,7 @@ const BackDialog = ({ open, setOpen }) => {
   };
   const handleConfirm = () => {
     setOpen(false);
-    navigate("/");
+    navigate("/home");
   };
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="xs" fullWidth>

@@ -12,7 +12,7 @@ const BackDialog = ({ open, setOpen }) => {
   const handleConfirm = () => {
     setTimeout(() => {
       setOpen(false);
-      navigate("/review");
+      navigate("/home");
     }, 500);
   };
   return (

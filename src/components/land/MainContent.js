@@ -29,7 +29,7 @@ const MainContent = () => {
           <Typography
             style={{
               color: "white",
-              fontSize: "65px",
+              fontSize: "55px",
               fontWeight: "bold",
               textDecoration: "unset",
               lineHeight: '1.22',
@@ -50,7 +50,7 @@ const MainContent = () => {
               fontFamily: "'SF Pro Display', sans-serif",
             }}
           >
-            Automate machine learning to gain insights on your data <br /> with zero coding required
+            Automate machine learning to gain insights on your <br /> data with zero coding required
           </Typography>
         </Box>
       </Box>
